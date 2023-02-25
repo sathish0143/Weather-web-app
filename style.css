@@ -1,0 +1,651 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+body {
+  background-color: #accdf3;
+}
+
+.first-box {
+  background-color: #5c9ce5;
+  height: 90vh;
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5vh;
+}
+
+.second-div {
+  background-color: #e4f1ff;
+  height: 90vh;
+  width: 75%;
+  margin-left: auto;
+  border-radius: 5vh;
+}
+.second-left {
+  position: absolute;
+  height: 100%;
+  width: 25%;
+}
+.first-left-div {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding-top: 15%;
+}
+.first-left-img-div,
+.switch-bar,
+.switch-div {
+  display: flex;
+  align-items: center;
+}
+
+.switch-div p {
+  margin-top: -5%;
+}
+
+.first-left-img {
+  width: 20px;
+}
+
+.switch-div p {
+  font-size: 10px;
+  color: white;
+  margin-right: 5px;
+  margin-left: 5px;
+  font-family: "Heebo", sans-serif;
+}
+
+.switch-bar-1 {
+  width: 12px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.switch-bar-2,
+.switch-bar-3 {
+  width: 4px;
+  height: 4px;
+  background-color: #c0ccda;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 22px;
+  height: 8px;
+  background: #c0ccda;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -1px;
+  width: 14px;
+  height: 14px;
+  background: rgb(255, 255, 255);
+  border-radius: 90px;
+  transition: 0.2s;
+}
+
+input:checked + label {
+  background: #c0ccda;
+}
+
+input:checked + label:after {
+  left: calc(100% - 1px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 20px;
+}
+
+.logo-name-div,
+.loaction-div,
+.first-image,
+.second-imaeg-div,
+.logo-name {
+  display: flex;
+}
+.sec-left-div {
+  margin-top: 20%;
+}
+
+.sec-left-div p {
+  font-family: "Kanit", sans-serif;
+  color: white;
+  font-size: 12px;
+}
+
+.sec-left-div img {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+.second-imaeg-div {
+  margin-top: 4%;
+}
+
+.second-imaeg-div p {
+  font-size: 10px;
+}
+
+.logo-name-div,
+.second-imaeg-div {
+  justify-content: space-evenly;
+}
+
+.first-image,
+.logo-name,
+.loaction-div {
+  display: flex;
+  align-items: center;
+}
+
+.third-left-div {
+  margin-top: 6%;
+  display: flex;
+  justify-content: center;
+}
+
+.third-left-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.third-left-arrow img {
+  width: 10px;
+  height: 10px;
+}
+
+.third-left-arrow h1 {
+  font-size: 70px;
+  color: white;
+  font-family: "Kanit", sans-serif;
+}
+
+.third-left-arrow sup {
+  font-size: 40px;
+  margin-left: 5px;
+}
+
+.fourth-left-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -5%;
+}
+.fourth-left-div img {
+  margin-right: 2%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+}
+.fourth-left-div h4 {
+  color: white;
+  font-family: "Kanit", sans-serif;
+  font-weight: 200;
+}
+.fifth-left img {
+  width: 150%;
+  max-width: 280px;
+  height: 90%;
+  margin-left: -30%;
+  object-fit: contain;
+}
+.fifth-left {
+  margin-top: auto;
+  position: relative;
+  margin-bottom: 10%;
+  max-height: 50%;
+  height: 53%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* profile div*/
+
+.second-div {
+  justify-content: center;
+}
+
+.main-profile {
+  height: 50px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 5%;
+}
+.right-profile-pic {
+  display: flex;
+}
+.welcome-name h4 {
+  font-family: "Kanit", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.welcome-name h5 {
+  font-family: "Kanit", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+.menu-bar h3 {
+  padding-right: 20px;
+}
+.profile-pic img {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+/* graph div */
+.chart {
+  margin-top: 6%;
+  display: flex;
+  width: 100%;
+
+  justify-content: center;
+}
+
+.chart-main {
+  background-color: white;
+  width: 90%;
+  height: 35%;
+  border-radius: 20px;
+
+  justify-content: center;
+}
+
+.next {
+  display: flex;
+}
+.rain-days {
+  margin-right: 20px;
+}
+.nextdays,
+.rain-days {
+  display: flex;
+  align-items: baseline;
+  background-color: rgb(235, 233, 233);
+  border-radius: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.nextdays img,
+.rain-days img {
+  filter: invert();
+  width: 6px;
+  height: 6px;
+}
+.rain-days img {
+  rotate: 90deg;
+}
+.next h5 {
+  font-size: 9px;
+  margin-right: 5px;
+  margin-top: 3%;
+}
+.chart-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.upcoming {
+  font-size: 12px;
+}
+.graph {
+  margin-top: 3%;
+}
+.graph ul {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.graph ul li {
+  list-style: none;
+}
+.graph ul li p {
+  font-size: 10px;
+  font-family: "Kanit", sans-serif;
+}
+.graph h4 {
+  font-size: 12px;
+  margin-left: 15%;
+}
+.graph h6 {
+  font-size: 9px;
+  margin-left: 5%;
+}
+.graph sup {
+  font-size: 10px;
+}
+.graph img {
+  width: 14px;
+  height: 14px;
+  margin-left: 16%;
+}
+.verticle-line {
+  border-left: 1px solid black;
+  height: 50px;
+  margin-left: 40%;
+}
+
+/*Chat graph*/
+.chart-graph {
+  width: 100%;
+  height: 100%;
+}
+
+#myChart {
+  width: 50%;
+  height: 100px;
+  max-width: 800px;
+  padding: 5.5%;
+  padding-top: 0;
+  padding-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* cards */
+
+.more-main {
+  width: 100%;
+  height: 50%;
+}
+.more-text h4 {
+  font-size: 10px;
+}
+.more-text {
+  margin-left: 5%;
+  margin-top: 3%;
+}
+.cards-div {
+  width: 100%;
+}
+.progress-1,
+.progress-2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.progress-1 {
+  margin-top: 3%;
+}
+.progress-2 {
+  margin-top: 3%;
+}
+.card-detail {
+  width: 28%;
+  height: 30%;
+  background-color: white;
+  border-radius: 20px;
+}
+.first-line {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+}
+.first-line h5 {
+  font-size: 9px;
+}
+.first-line img {
+  box-sizing: border-box;
+  background-color: #5c9ce5;
+  padding: 3px;
+  border-radius: 5px;
+  width: 15px;
+  height: 15px;
+}
+.second-line {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
+.second-line h1 {
+  font-size: 12px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.second-line p {
+  font-size: 9px;
+  margin-left: 5px;
+}
+.display-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  margin-top: -15%;
+}
+.display-con img {
+  width: 15px;
+  height: 15px;
+
+  margin-left: -10%;
+  padding-bottom: px;
+  margin-bottom: 5px;
+}
+
+.third-line {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  padding-bottom: 10%;
+}
+.third-line h3 {
+  font-size: 8px;
+  font-weight: 200;
+  color: rgb(138, 138, 138);
+}
+
+/* progress bar card1 */
+.container {
+  width: 35px;
+}
+
+.progress {
+  background: rgb(235, 233, 233);
+  border-radius: 10px;
+}
+
+.progress-bar {
+  height: 5px;
+  border-radius: 10px;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-striped .progress-bar {
+  background-color: #5c9ce5;
+  width: 90%;
+  animation: progressAnimationStrike 6s;
+}
+
+@keyframes progressAnimationStrike {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+/* progress bar card3*/
+.bar3-container {
+  width: 10px;
+}
+/* progress bar card4 */
+.bar4-container {
+  width: 20px;
+}
+
+.bar41-strip .bar41-bar {
+  background-color: #5c9ce5;
+  width: 100%;
+  animation: animatebar41 6s;
+}
+@keyframes animatebar41 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.bar42-strip .bar42-bar {
+  background-color: #5c9ce5;
+  width: 50%;
+  animation: animatebar42 6s;
+}
+@keyframes animatebar42 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+/* progress bar card5 */
+
+.card5-container {
+  width: 120px;
+}
+
+.card5-strip .card5-bar {
+  background-color: #5c9ce5;
+  width: 70%;
+  animation: animatebar5 6s;
+}
+
+@keyframes animatebar5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+/* progress bar card6 */
+
+.card6-container {
+  width: 120px;
+}
+
+.card6-strip .card6-bar {
+  background-color: #5c9ce5;
+  width: 38%;
+  animation: animatebar5 6s;
+}
+
+@keyframes animatebar5 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 38%;
+  }
+}
+
+/* graph */
+.highcharts-figure,
+.highcharts-data-table table {
+  min-width: 360px;
+  max-width: 800px;
+  margin: 1em auto;
+}
+
+.highcharts-data-table table {
+  font-family: Verdana, sans-serif;
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;
+  margin: 10px auto;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+.highcharts-data-table caption {
+  padding: 1em 0;
+  font-size: 1.2em;
+  color: #555;
+}
+.highcharts-data-table th {
+  font-weight: 600;
+  padding: 0.5em;
+}
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+  padding: 0.5em;
+}
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+  background: #f1f7ff;
+}
+
+/* progrss bars send card*/
+
+.bar-length {
+  margin-top: -8%;
+}
+
+.progress-cir {
+  position: relative;
+  margin: 4px;
+  float: left;
+  text-align: center;
+}
+.barOverflow {
+  /* Wraps the rotating .bar */
+  position: relative;
+  overflow: hidden; /* Comment this line to understand the trick */
+  width: 90px;
+  height: 45px; /* Half circle (overflow) */
+  margin-bottom: -14px; /* bring the numbers up */
+  position: relative;
+}
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px; /* full circle! */
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 5px solid #eee; /* half gray, */
+  border-bottom-color: #5c9ce5; /* half azure */
+  border-right-color: #5c9ce5;
+  rotate: 45deg;
+}

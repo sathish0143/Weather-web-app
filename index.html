@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather web app</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        var bar = $(".bar");
+        bar.animate({ rotate: "100deg" }, 2000);
+      });
+      $(document).ready(function () {
+        var needle = $(".needle-img");
+        needle.animate({ rotate: "93deg" }, 2000);
+      });
+    </script>
+    <script src="./index.js"></script>
+  </head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <body>
+    <div class="main-div">
+      <div class="first-box">
+        <div class="second-left">
+          <div class="first-left-div">
+            <div class="first-left-img-div">
+              <img
+                class="first-left-img"
+                src="./png/add-box.png"
+                alt="add-box"
+              />
+            </div>
+            <div class="switch-bar">
+              <div class="switch-bar-1"></div>
+              <div class="switch-bar-2"></div>
+              <div class="switch-bar-3"></div>
+            </div>
+            <div class="switch-div">
+              <p><sup>o</sup>C</p>
+              <input type="checkbox" id="switch" />
+              <label for="switch"></label>
+              <p><sup>o</sup>F</p>
+            </div>
+          </div>
+          <div class="sec-left-div">
+            <div class="logo-name-div">
+              <div class="loaction-div">
+                <img src="./png/navigation.png" alt="" />
+                <p>New York ,USA</p>
+              </div>
+              <div class="first-image">
+                <img src="./png/rainy-day.png" alt="" />
+                <p>07:19</p>
+              </div>
+            </div>
+            <div class="second-imaeg-div">
+              <div class="date-div">
+                <p>Today 28 Sept</p>
+              </div>
+              <div class="logo-name">
+                <img src="./png/rainy-day.png" alt="" />
+                <p>19:32</p>
+              </div>
+            </div>
+          </div>
+          <div class="third-left-div">
+            <div class="third-left-arrow">
+              <img class="test" src="./png/left-arrow.png" alt="" />
+              <h1>27<sup>o</sup></h1>
+              <img src="./png/right-arrow.png" alt="" />
+            </div>
+          </div>
+          <div class="fourth-left-div">
+            <img src="./png/sun.png" alt="" />
+            <h4>Sunny</h4>
+          </div>
+          <div class="fifth-left">
+            <img src="./png/building.png" alt="" />
+          </div>
+        </div>
+        <div class="second-div">
+          <div class="main-profile">
+            <div class="welcome-name">
+              <h4>Wellcome back Sathish!</h4>
+              <h5>Check out today's weather information</h5>
+            </div>
+            <div class="right-profile-pic">
+              <div class="menu-bar">
+                <h2 style="margin-top: -8px; margin-right: 20px">...</h2>
+              </div>
+              <div class="profile-pic">
+                <img src="./png/profile.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="chart">
+            <div class="chart-main">
+              <div class="chart-details">
+                <div class="upcoming"><h4>Upcoming Hours</h4></div>
+                <div class="next">
+                  <div class="rain-days">
+                    <h5>Rain Preparation</h5>
+                    <img src="./png/right-arrow.png" alt="" />
+                  </div>
+                  <div class="nextdays">
+                    <h5>Next Days</h5>
+                    <img src="./png/right-arrow.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="graph">
+                <ul>
+                  <li>
+                    <div class="list-div">
+                      <p>Now</p>
+                      <img src="./png/sunny.png" alt="" />
+                      <h4>27<sup>o</sup></h4>
+                    </div>
+                  </li>
+                  <li>
+                    <p>11:00</p>
+                    <img src="./png/sunny.png" alt="" />
+                    <h4>28<sup>o</sup></h4>
+                  </li>
+                  <li>
+                    <p>12:00</p>
+                    <img src="./png/cloudy.png" alt="" />
+                    <h4>28<sup>o</sup></h4>
+                  </li>
+                  <li>
+                    <p>13:00</p>
+                    <img src="./png/cloudy.png" alt="" />
+                    <h4>29<sup>o</sup></h4>
+                  </li>
+                  <li>
+                    <p>14:00</p>
+                    <img src="./png/sunny.png" alt="" />
+                    <h4>30<sup>o</sup></h4>
+                  </li>
+                  <li>
+                    <p>15:00</p>
+                    <img src="./png/cloudy.png" alt="" />
+                    <h4>29<sup>o</sup></h4>
+                  </li>
+                  <li>
+                    <p>16:00</p>
+                    <img src="./png/cloudy.png" alt="" />
+                    <h4>29<sup>o</sup></h4>
+                  </li>
+                  <li>
+                    <p>17:00</p>
+                    <img src="./png/sunny.png" alt="" />
+                    <h4>28<sup>o</sup></h4>
+                  </li>
+                </ul>
+                <div class="chart-graph">
+                  <canvas id="myChart" width="92%" height="13%"></canvas>
+                </div>
+
+                <script src="./index.js"></script>
+              </div>
+            </div>
+          </div>
+          <div class="more-main">
+            <div class="more-text">
+              <h4>More details of today's weather</h4>
+            </div>
+            <div class="cards-div">
+              <div class="progress-1">
+                <div class="card1 card-detail">
+                  <div class="first-line">
+                    <h5>Humidity</h5>
+                    <img src="./png/humidity.png" alt="" />
+                  </div>
+                  <div class="second-line">
+                    <h1>82%</h1>
+                    <p>bad</p>
+                  </div>
+                  <div class="third-line">
+                    <div class="good">
+                      <h3>good</h3>
+                      <div class="container">
+                        <div class="progress progress-striped">
+                          <div class="progress-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="normal">
+                      <h3>normal</h3>
+                      <div class="container">
+                        <div class="progress progress-striped">
+                          <div class="progress-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bad">
+                      <h3>bad</h3>
+                      <div class="container">
+                        <div class="progress progress-striped">
+                          <div class="progress-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card2 card-detail">
+                  <div class="first-line">
+                    <h5>wind</h5>
+                    <img src="./png/wind.png" alt="" />
+                  </div>
+                  <div class="second-line bar-length">
+                    <div class="progress-cir">
+                      <div class="barOverflow">
+                        <div class="bar"></div>
+                      </div>
+                      <span style="display: none">90</span>
+                    </div>
+                  </div>
+                  <div
+                    class="second-line display-con"
+                    style="margin-bottom: 5%"
+                  >
+                    <img class="needle-img" src="./png/clothes.png" alt="" />
+                    <h1 style="margin-top: -3%; margin-bottom: 10%">8 km/h</h1>
+                  </div>
+                </div>
+                <div class="card3 card-detail">
+                  <div class="first-line">
+                    <h5>Precipitation</h5>
+                    <img src="./png/cloud (2).png" alt="" />
+                  </div>
+                  <div class="second-line">
+                    <h1>1.4</h1>
+                    <p>cm</p>
+                  </div>
+                  <div class="third-line">
+                    <div class="good">
+                      <h3>0</h3>
+                      <div class="container bar3-container">
+                        <div class="progress progress-striped bar41-strip">
+                          <div class="progress-bar bar41-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="normal">
+                      <h3>10</h3>
+                      <div class="container bar3-container">
+                        <div class="progress progress-striped bar42-strip">
+                          <div class="progress-bar bar42-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bad">
+                      <h3>20</h3>
+                      <div class="container bar3-container">
+                        <div class="progress">
+                          <div class="progress-bar bar4-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bad">
+                      <h3>30</h3>
+                      <div class="container bar3-container">
+                        <div class="progress">
+                          <div class="progress-bar bar4-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bad">
+                      <h3>40+</h3>
+                      <div class="container bar3-container">
+                        <div class="progress">
+                          <div class="progress-bar bar4-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bad">
+                      <h3>50</h3>
+                      <div class="container bar3-container">
+                        <div class="progress">
+                          <div class="progress-bar bar4-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bad">
+                      <h3>60</h3>
+                      <div class="container bar3-container">
+                        <div class="progress">
+                          <div class="progress-bar bar4-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bad">
+                      <h3>70</h3>
+                      <div class="container bar3-container">
+                        <div class="progress">
+                          <div class="progress-bar bar4-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bad">
+                      <h3>80</h3>
+                      <div class="container bar3-container">
+                        <div class="progress">
+                          <div class="progress-bar bar4-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bad">
+                      <h3>90</h3>
+                      <div class="container bar3-container">
+                        <div class="progress">
+                          <div class="progress-bar bar4-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="progress-2">
+                <div class="card4 card-detail">
+                  <div class="first-line">
+                    <h5>UV index</h5>
+                    <img src="./png/sun.png" alt="" />
+                  </div>
+                  <div class="second-line">
+                    <h1>4</h1>
+                    <p>medium</p>
+                  </div>
+                  <div class="third-line">
+                    <div class="good">
+                      <h3>0-2</h3>
+                      <div class="container bar4-container">
+                        <div class="progress progress-striped bar41-strip">
+                          <div class="progress-bar bar41-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="normal">
+                      <h3>3-5</h3>
+                      <div class="container bar4-container">
+                        <div class="progress progress-striped bar42-strip">
+                          <div class="progress-bar bar42-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bad">
+                      <h3>6-7</h3>
+                      <div class="container bar4-container">
+                        <div class="progress">
+                          <div class="progress-bar bar4-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bad">
+                      <h3>8-10</h3>
+                      <div class="container bar4-container">
+                        <div class="progress">
+                          <div class="progress-bar bar4-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bad">
+                      <h3>11+</h3>
+                      <div class="container bar4-container">
+                        <div class="progress">
+                          <div class="progress-bar bar4-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card5 card-detail">
+                  <div class="first-line">
+                    <h5>Feels like</h5>
+                    <img src="./png/thermometer.png" alt="" />
+                  </div>
+                  <div class="second-line" style="margin-top: 0">
+                    <h1>30<sup>o</sup></h1>
+                  </div>
+                  <div class="third-line">
+                    <div class="good">
+                      <div
+                        class="bar5-deg"
+                        style="display: flex; justify-content: space-between"
+                      >
+                        <h3>0<sup>o</sup></h3>
+                        <h3>25<sup>o</sup></h3>
+                        <h3>50<sup>o</sup></h3>
+                      </div>
+                      <div class="container card5-container">
+                        <div class="progress progress-striped card5-strip">
+                          <div class="progress-bar card5-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card6 card-detail">
+                  <div class="first-line">
+                    <h5>Chance of rain</h5>
+                    <img src="./png/rainy-day.png" alt="" />
+                  </div>
+                  <div class="second-line" style="margin-top: 1%">
+                    <h1>42%</h1>
+                  </div>
+                  <div class="third-line">
+                    <div class="good">
+                      <div
+                        class="bar5-deg"
+                        style="display: flex; justify-content: space-between"
+                      >
+                        <h3>0<sup>o</sup></h3>
+                        <h3>25<sup>o</sup></h3>
+                        <h3>50<sup>o</sup></h3>
+                        <h3>75<sup>o</sup></h3>
+                        <h3>100<sup>o</sup></h3>
+                      </div>
+                      <div class="container card6-container">
+                        <div class="progress progress-striped card6-strip">
+                          <div class="progress-bar card6-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
